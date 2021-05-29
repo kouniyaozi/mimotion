@@ -1,21 +1,12 @@
 name: 刷
 
 on:
-  workflow_dispatch:
-    inputs:
-      user:
-        description: '17753852041'
-        required: true
-        default: ''
-      pwd:
-        description: 'nimei14753'
-        required: true
-        default: ''
-      step:
-        description: '2022'
-        required: false
-        default: '0'
-
+ push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: 0 16 * * *
   
 
 jobs:
